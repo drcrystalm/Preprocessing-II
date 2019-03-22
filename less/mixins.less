@@ -1,1 +1,30 @@
 // Mixins in here
+
+.flex (@align-center, @justify) {
+  display: flex;
+  justify-content: @justify;
+  align-content: @align-center;
+}
+
+.center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-style (@fontsize) {
+  display: flex;
+  background-color: @eastern-blue #17a2b8;
+  color: @white;
+  justify-content: center;
+  font-size: @fontsize;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: darken(@eastern-blue, 10%);
+  }
+}
+
+/* button {
+  .button-style(1 rem);
+}*/
