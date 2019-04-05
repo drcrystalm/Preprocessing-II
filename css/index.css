@@ -2,29 +2,31 @@
   background-color: red;
 }*/
 @media (max-width: 500px) {
-  .content-section {
-    background: red;
-  }
-  .content-section .text-content {
-    min-width: 100%;
-  }
-}
-@media (max-width: 500px) {
   .content-pick {
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: center;
     align-content: center;
-    min-width: 100%;
+    width: 100%;
     flex-wrap: wrap;
-    background: blue;
   }
-}
-@media (max-width: 500px) {
-  .btn {
+  .content-pick .btn {
     padding: 15px 10px;
     border-radius: 10px;
     width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .nav-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    background: pink;
+  }
+  .nav-content .logo {
+    margin: 0 auto;
   }
 }
 button {
@@ -212,40 +214,38 @@ img {
   margin: 0 auto;
 }
 .nav-container {
-  height: 100px;
-  min-width: 100%;
+  width: 1000px;
+  padding: 15px;
+  margin: 0 auto;
+  padding-top: 45px;
   border-bottom: 2px dashed #c0c0c0;
-  display: flex;
-  justify-content: space-around;
 }
 .nav-container .nav-content {
   width: 800px;
-  padding: 50px;
   margin: 0 auto;
+  padding: 10px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+.nav-container .nav-content nav {
+  display: flex;
   align-items: center;
 }
-.nav-container a {
+.nav-container .nav-content nav a {
+  margin-left: 50px;
   text-decoration: none;
   color: #212529;
-  padding: 20px;
   font-size: 1.5rem;
 }
-.nav-container a:hover {
+.nav-container .nav-content nav a :last-child {
+  margin-left: 0;
+}
+.nav-container .nav-content nav a:hover {
   text-decoration: overline;
   font-size: 1.6rem;
   color: #17a2b8;
-}
-@media (max-width: 500px) {
-  .container-home {
-    background: pink;
-  }
-  .nav-container {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 footer {
   width: 100%;
@@ -257,6 +257,10 @@ footer p {
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+}
+.home .welcome {
+  margin: 30px 0;
+  border-bottom: 2px dashed #c0c0c0;
 }
 .home .content-section {
   margin: 30px 0;

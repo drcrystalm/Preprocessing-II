@@ -1,42 +1,50 @@
 // Navigation Styles here
 
 .nav-container {
-  height: 100px;
-  min-width: 100%;
+
+  width: 1000px;
+  padding: 15px;
+  margin: 0 auto;
+  padding-top: 45px;
   border-bottom: 2px dashed @silver;
-  display: flex;
-  justify-content: space-around;
+
+
 
   .nav-content {
     width: 800px;
-    padding: 50px;
     margin: 0 auto;
+    padding: 10px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-  }
 
-  a {
-    text-decoration: none;
-    color: @shark;
-    padding: 20px;
-    font-size: 1.5rem;
+    .logo {}
 
-    &:hover {
-      text-decoration: overline;
-      font-size: 1.6rem;
-      color: @eastern-blue;
+    nav {
+
+      display: flex;
+      align-items: center;
+
+
+
+
+      a {
+        margin-left: 50px;
+        text-decoration: none;
+        color: @shark;
+        font-size: 1.5rem;
+
+        :last-child {
+          margin-left: 0;
+        }
+
+        &:hover {
+          text-decoration: overline;
+          font-size: 1.6rem;
+          color: @eastern-blue;
+        }
+      }
     }
-  }
-}
-
-@media (max-width: 500px) {
-  .container-home {
-    background: pink;
-  }
-  .nav-container {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
   }
 }

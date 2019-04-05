@@ -13,31 +13,36 @@
 @sandy-beach: #ffebcd;
 
 @mobile: ~"(max-width: 500px)";
-@media @mobile {
-  .content-section {
-    background: red;
-    .text-content {
-      min-width: 100%;
-    }
-  }
-}
 
 @media @mobile {
   .content-pick {
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: center;
     align-content: center;
-    min-width: 100%;
+    width: 100%;
     flex-wrap: wrap;
-    background: blue;
+
+    // background: blue;
+    .btn {
+      padding: 15px 10px;
+      border-radius: 10px;
+      width: 100%;
+    }
   }
 }
 
 @media @mobile {
-  .btn {
-    padding: 15px 10px;
-    border-radius: 10px;
+  .nav-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     width: 100%;
+    background: pink;
+
+    .logo {
+      margin: 0 auto;
+    }
   }
 }
