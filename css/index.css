@@ -1,33 +1,26 @@
 /*body {
   background-color: red;
 }*/
-@media (max-width: 500px) {
-  .content-pick {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  .content-pick .btn {
-    padding: 15px 10px;
-    border-radius: 10px;
-    width: 100%;
-  }
+.container .content-pick {
+  width: 100%;
+  background: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-@media (max-width: 500px) {
-  .nav-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-    background: pink;
-  }
-  .nav-content .logo {
-    margin: 0 auto;
-  }
+.container .content-pick .destination {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: yellow;
+}
+.container .content-pick .destination .btn {
+  padding: 15px 10px;
+  border-radius: 10px;
+  width: 100%;
 }
 button {
   display: flex;
@@ -43,6 +36,26 @@ button {
 button:hover {
   background-color: #117a8b;
 }
+/*.button-style (@display, @justify, @color, @bkgc) {
+  display: @display;
+  width: 80%;
+  height: 45px;
+  color: @color;
+  background-color: @bkgc;
+  justify-content: @justify;
+  font-size: 2.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(@eastern-blue, 10%);
+  }
+
+}
+
+.button(flex;
+center;
+@white, @eastern-blue); */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -213,12 +226,25 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+    border: 5px solid pink;
+  }
+}
 .nav-container {
-  width: 1000px;
+  max-width: 1000px;
   padding: 15px;
   margin: 0 auto;
   padding-top: 45px;
   border-bottom: 2px dashed #c0c0c0;
+}
+@media (max-width: 500px) {
+  .nav-container {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 .nav-container .nav-content {
   width: 800px;
@@ -228,6 +254,23 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .nav-container .nav-content {
+    width: 100%;
+    padding: 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 500px) {
+  .nav-container .nav-content .logo {
+    margin-bottom: 10px;
+  }
 }
 .nav-container .nav-content nav {
   display: flex;
@@ -243,7 +286,7 @@ img {
   margin-left: 0;
 }
 .nav-container .nav-content nav a:hover {
-  text-decoration: overline;
+  text-decoration: none;
   font-size: 1.6rem;
   color: #17a2b8;
 }
@@ -268,13 +311,32 @@ footer p {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 100%;
+    padding: 0;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
 }
 .home .content-section .img-content img {
   border-radius: 10px;
@@ -282,6 +344,12 @@ footer p {
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #c0c0c0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+    margin-top: 20px;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -295,6 +363,11 @@ footer p {
   width: 75%;
   margin: 0 auto 30px;
 }
+@media (max-width: 500px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
 .home .content-destination img {
   border-radius: 10px;
 }
@@ -307,4 +380,9 @@ footer p {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 100%;
+  }
 }
