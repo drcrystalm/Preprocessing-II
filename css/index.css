@@ -1,61 +1,26 @@
 /*body {
   background-color: red;
 }*/
-.container .content-pick {
-  width: 100%;
-  background: pink;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.container .content-pick .destination {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  background: yellow;
-}
-.container .content-pick .destination .btn {
-  padding: 15px 10px;
-  border-radius: 10px;
-  width: 100%;
-}
 button {
-  display: flex;
   width: 80%;
   height: 35px;
   background-color: #17a2b8 #17a2b8;
-  color: #ffffff;
-  justify-content: center;
   font-size: 2.5 rem;
   border-radius: 10px;
-  cursor: pointer;
+  color: #ffffff;
+  background-color: #17a2b8;
+  justify-content: center;
 }
 button:hover {
   background-color: #117a8b;
 }
-/*.button-style (@display, @justify, @color, @bkgc) {
-  display: @display;
-  width: 80%;
-  height: 45px;
-  color: @color;
-  background-color: @bkgc;
-  justify-content: @justify;
-  font-size: 2.5rem;
-  border-radius: 10px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: darken(@eastern-blue, 10%);
+@media (max-width: 500px) {
+  button {
+    width: 90%;
+    height: 45px;
+    font-size: 2rem;
   }
-
 }
-
-.button(flex;
-center;
-@white, @eastern-blue); */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -229,7 +194,6 @@ img {
 @media (max-width: 500px) {
   .container {
     padding: 20px;
-    border: 5px solid pink;
   }
 }
 .nav-container {
@@ -376,6 +340,13 @@ footer p {
   border-top: 2px dashed #c0c0c0;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .home .content-pick {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+  }
 }
 .home .content-pick .destination {
   width: 30%;

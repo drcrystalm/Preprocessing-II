@@ -12,8 +12,13 @@
   align-items: center;
 }
 
+.button-style (@justify, @color, @bkgc) {
+  color: @color;
+  background-color: @bkgc;
+  justify-content: @justify;
+}
+
 button {
-  display: flex;
   width: 80%;
   height: 35px;
   background-color: @eastern-blue #17a2b8;
@@ -21,30 +26,15 @@ button {
   justify-content: center;
   font-size: 2.5 rem;
   border-radius: 10px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: darken(@eastern-blue, 10%);
-  }
-}
-
-/*.button-style (@display, @justify, @color, @bkgc) {
-  display: @display;
-  width: 80%;
-  height: 45px;
-  color: @color;
-  background-color: @bkgc;
-  justify-content: @justify;
-  font-size: 2.5rem;
-  border-radius: 10px;
-  cursor: pointer;
+  .button-style (center, @white, @eastern-blue);
 
   &:hover {
     background-color: darken(@eastern-blue, 10%);
   }
 
+  @media @mobile {
+    width: 90%;
+    height: 45px;
+    font-size: 2.0rem;
+  }
 }
-
-.button(flex;
-center;
-@white, @eastern-blue); */
